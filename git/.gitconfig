@@ -1,0 +1,7 @@
+[user]
+	email = jeanmarcboite@gmail.com
+	name = Jean-Marc Boite
+[credential]
+	helper = cache --timeout=3600
+[core]
+	autocrlf = input
