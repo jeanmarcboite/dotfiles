@@ -1,0 +1,33 @@
+[Desktop Action NewPrivateWindow]
+Exec=opera-beta --private
+Name=New Private Window
+TargetEnvironment=Unity
+
+[Desktop Action NewWindow]
+Exec=opera-beta --new-window
+Name=New Window
+TargetEnvironment=Unity
+
+[Desktop Entry]
+Actions=NewWindow;NewPrivateWindow;
+Categories=Network;WebBrowser;
+Comment[en_US]=Fast and secure web browser
+Comment=Fast and secure web browser
+Exec=opera-beta %U
+GenericName[en_US]=Web browser
+GenericName=Web browser
+Icon=opera-beta
+MimeType=text/html;application/xml;application/x-opera-download;
+Name[en_US]=Opera beta
+Name=Opera beta
+Path=
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+TryExec=opera-beta
+Type=Application
+Version=1.0
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
+X-KDE-SubstituteUID=false
+X-KDE-Username=

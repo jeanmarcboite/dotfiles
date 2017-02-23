@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Enpass
+Exec= /opt/Enpass/bin/runenpass.sh startWithTray 
+Icon=enpass.png
+Comment=The best password manager
+X-GNOME-Autostart-enabled=true

@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=hubiC
+Exec=/usr/lib/hubic/hubic-service
+Name=hubiC
+Icon=hubic
+Type=Application
+X-GNOME-Autostart-enabled=true
