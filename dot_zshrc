@@ -4,23 +4,8 @@ USE_POWERLINE="true"
 # Example:
 #    is not a diamond
 HAS_WIDECHARS="false"
-# Source manjaro-zsh-configuration
-if [[ -e /usr/share/zsh/manjaro-zsh-config ]]; then
-  source /usr/share/zsh/manjaro-zsh-config
-fi
-# Use manjaro zsh prompt
-if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
-  source /usr/share/zsh/manjaro-zsh-prompt
-fi
-### Added by Zplugin's installer
-source '/home/box/.zplugin/bin/zplugin.zsh'
-autoload -Uz _zplugin
-(( ${+_comps} )) && _comps[zplugin]=_zplugin
-fpath=(${ZDOTDIR:-$HOME}/.zbin/buffalo.zsh $fpath)
-#echo $PATH
-### End of Zplugin's installer chunk
 alias zshrc='source "${ZDOTDIR:-$HOME}/.zshrc"'
-export EDITOR=vim
+export EDITOR=nvim
 # Customize to your needs...
 setopt nobeep
 setopt auto_cd
@@ -55,18 +40,26 @@ alias pacman='sudo pacman'
 export GITHUB_USERNAME="jmboite"
 alias dgit='git --git-dir ~/.dotfiles/.git --work-tree=$HOME'
 alias dpush='dgit push -u origin master'
-zplugin load zsh-users/zsh-syntax-highlighting
-zplugin load zsh-users/zsh-autosuggestions
-zplugin load hcgraf/zsh-sudo    # ESC-ESC to sudo
-zplugin load jimeh/zsh-peco-history
+ZIM_CONFIG_FILE=~/.config/zsh/zimrc
+ZIM_HOME=${ZDOTDIR:-${HOME}}/.zim
+
+# Download zimfw plugin manager if missing.
+if [[ ! -e ${ZIM_HOME}/zimfw.zsh ]]; then
+  mkdir -p ${ZIM_HOME} && wget -nv -O ${ZIM_HOME}/zimfw.zsh \
+      https://github.com/zimfw/zimfw/releases/latest/download/zimfw.zsh
+fi
+
+# Install missing modules and update ${ZIM_HOME}/init.zsh if missing or outdated.
+if [[ ! ${ZIM_HOME}/init.zsh -nt ${ZIM_CONFIG_FILE:-${ZDOTDIR:-${HOME}}/.zimrc} ]]; then
+  source ${ZIM_HOME}/zimfw.zsh init
+fi
+
+source ${ZIM_HOME}/init.zsh
 
 alias docker-up='docker-compose up -d'
 alias docker-ps='docker ps'
 alias docker-start='sudo systemctl start docker'
 alias docker-stop='docker stop $(docker ps -a -q)'
-
-fpath+=~/.zfunc
-#autoload -Uz compinit && compinint
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
