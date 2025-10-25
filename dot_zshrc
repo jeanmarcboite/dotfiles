@@ -99,6 +99,9 @@ fi
 for s in aliases opts env; do
   source $ZSH_CUSTOM/$s.zsh
 done
+for s in $ZSH_CUSTOM/*.zsh; do
+  echo $s
+done
 # - $ZSH_CUSTOM/macos.zsh
 # For a full list of active aliases, run `alias`.
 #
