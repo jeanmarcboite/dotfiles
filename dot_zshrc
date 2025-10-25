@@ -56,6 +56,7 @@ fi
 
 source ${ZIM_HOME}/init.zsh
 
+# Docker
 alias docker-up='docker-compose up -d'
 alias docker-ps='docker ps'
 alias docker-start='sudo systemctl start docker'
