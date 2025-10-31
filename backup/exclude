@@ -1,0 +1,13 @@
+.AndroidStudio*
+.cache
+cache
+.gradle
+.Xauthority
+.Idea*
+.npm
+.pcloud
+Downloads
+VirtualBox*
+tmp
+.local
+pCloudDrive
