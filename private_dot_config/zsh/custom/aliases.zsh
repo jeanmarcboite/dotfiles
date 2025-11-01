@@ -11,3 +11,6 @@ alias sshp="eval `ssh-agent -s` ; ssh-add ~/.ssh/id_rsa"
 alias du='du -h'
 alias df='df -h'
 alias d1='du -h --max-depth=1'
+
+# fzf
+alias fvim='fzf --bind 'enter:become(nvim {})'
