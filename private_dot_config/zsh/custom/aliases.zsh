@@ -13,4 +13,4 @@ alias df='df -h'
 alias d1='du -h --max-depth=1'
 
 # fzf
-alias fvim='fzf --bind enter:become(nvim {})'
+alias fvim="fzf --bind enter:become(nvim {})"
