@@ -14,3 +14,4 @@ alias d1='du -h --max-depth=1'
 
 # fzf
 alias fvim="fzf --bind 'enter:become(nvim {})'"
+alias nvz="fzf --style full --preview 'cat {}' --bind 'focus:transform-header:file --brief {}'"
