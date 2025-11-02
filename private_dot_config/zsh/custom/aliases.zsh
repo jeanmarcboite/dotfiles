@@ -16,3 +16,8 @@ alias d1='du -h --max-depth=1'
 alias fvim="fzf --bind 'enter:become(nvim {})'"
 # alias nvz="fzf --style full --preview 'cat {}' --bind 'focus:transform-header:file --brief {}'"
 alias nvz="fzf --preview 'bat --color=always {}' --preview-window '~3'"
+
+# nvim, chezmoi
+alias ù=nvim
+alias ùl="chezmoi list"
+alias ùe="chezmoi edit --watch"
