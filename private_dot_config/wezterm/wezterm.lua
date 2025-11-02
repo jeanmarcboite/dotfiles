@@ -13,4 +13,14 @@ config.use_fancy_tab_bar = true
 config.hide_tab_bar_if_only_one_tab = true
 config.window_background_opacity = 0.80
 
+config.keys = {
+	{
+		key = '"',
+		mods = "SUPER",
+		action = wezterm.action.SplitVertical({
+			args = { "top" },
+		}),
+	},
+}
+
 return config
