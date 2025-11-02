@@ -19,5 +19,6 @@ alias nvz="fzf --preview 'bat --color=always {}' --preview-window '~3'"
 
 # nvim, chezmoi
 alias ù=nvim
+alias wù="wezterm start -- nvim"
 alias ùl="chezmoi list"
 alias ùe="chezmoi edit --watch"
