@@ -50,4 +50,12 @@ config.keys = {
 	},
 }
 
+config.keys = {
+	{
+		key = "c",
+		mods = "LEADER",
+		action = wezterm.action.CloseCurrentTab({ confirm = false }),
+	},
+}
+
 return config
