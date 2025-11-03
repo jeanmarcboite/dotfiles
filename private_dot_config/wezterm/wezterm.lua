@@ -30,7 +30,7 @@ config.leader = {
 	timeout_milliseconds = 5000,
 }
 
-wezterm.config.keys = {
+config.keys = {
 	{
 		key = "c",
 		mods = "LEADER",
