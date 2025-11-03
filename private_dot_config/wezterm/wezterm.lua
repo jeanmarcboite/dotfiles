@@ -13,13 +13,27 @@ config.use_fancy_tab_bar = true
 config.hide_tab_bar_if_only_one_tab = true
 config.window_background_opacity = 0.80
 
-config.keys = {
+-- #config.keys = {
+-- #{
+-- 		key = '"',
+-- 		-- mods = "SUPER",
+-- 		-- action = wezterm.action.SplitVertical({
+-- 		-- 	args = { "top" },
+-- 		}),
+-- 	},
+-- }
+--
+wezterm.config.leader = {
+	key = " ",
+	mods = "CTRL",
+	timeout_milliseconds = 2000,
+}
+
+wezterm.config.keys = {
 	{
-		key = '"',
-		mods = "SUPER",
-		action = wezterm.action.SplitVertical({
-			args = { "top" },
-		}),
+		key = "(",
+		mods = "LEADER",
+		action = wezterm.action.ActivateCopyMode,
 	},
 }
 
