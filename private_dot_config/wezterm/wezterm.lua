@@ -26,7 +26,6 @@ config.window_background_opacity = 0.80
 
 config.leader = {
 	key = "²",
-	mods = "CTRL",
 	timeout_milliseconds = 5000,
 }
 
