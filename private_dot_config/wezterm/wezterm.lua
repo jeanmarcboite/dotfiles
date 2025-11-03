@@ -31,7 +31,7 @@ config.leader = {
 
 config.keys = {
 	{
-		key = "c",
+		key = "t",
 		mods = "LEADER",
 		action = wezterm.action.SpawnTab("CurrentPaneDomain"),
 	},
