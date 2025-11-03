@@ -25,9 +25,9 @@ config.window_background_opacity = 0.80
 --
 
 config.leader = {
-	key = " ",
+	key = "x",
 	mods = "CTRL",
-	timeout_milliseconds = 2000,
+	timeout_milliseconds = 5000,
 }
 
 wezterm.config.keys = {
