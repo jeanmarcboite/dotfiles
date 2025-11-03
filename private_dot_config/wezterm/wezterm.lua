@@ -32,11 +32,6 @@ config.leader = {
 
 wezterm.config.keys = {
 	{
-		key = "(",
-		mods = "LEADER",
-		action = wezterm.action.ActivateCopyMode,
-	},
-	{
 		key = "c",
 		mods = "LEADER",
 		action = wezterm.action.SpawnTab("CurrentPaneDomain"),
